@@ -19,7 +19,7 @@ function Main(props) {
         setCards(card)
         })
       .catch(console.log)
-  }, [userName, userDescription, userAvatar, cards])
+  }, [])
 
   return (
     <>

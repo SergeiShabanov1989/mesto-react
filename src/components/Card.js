@@ -10,7 +10,7 @@ function Card({link, name, likes, onCardClick}) {
 
   return (
     <div className="elements__element">
-      <img onClick={handleClick} src={link} className="elements__image"/>
+      <img onClick={handleClick} src={link} alt={name} className="elements__image"/>
       <button
         className="elements__trash"
         type="button">
