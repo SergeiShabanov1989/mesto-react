@@ -24,6 +24,7 @@
 @import url(./blocks/elements/__element/elements__element.css);
 @import url(./blocks/elements/__image/elements__image.css);
 @import url(./blocks/elements/__trash/elements__trash.css);
+@import url(./blocks/elements/__trash/_active/elements__trash_active.css);
 @import url(./blocks/elements/__discription/elements__discription.css);
 @import url(./blocks/elements/__text/elements__text.css);
 @import url(./blocks/elements/__discription-wrapper/elements__discription-wrapper.css);
