@@ -1,6 +1,6 @@
 import {useContext} from "react";
-import EditCard from '../images/EditCard.svg'
-import Vector from '../images/Vector.svg'
+import editCard from '../images/editCard.svg'
+import vector from '../images/vector.svg'
 import Card from "./Card";
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
@@ -18,7 +18,7 @@ function Main(props) {
                 alt="твой аватар"
                 className="profile__avatar"/>
               <div className="profile__edit-overlay">
-                <img src={EditCard} className="profile__edit-img" alt="Изменить аватар" onClick={props.onEditAvatar}/>
+                <img src={editCard} className="profile__edit-img" alt="Изменить аватар" onClick={props.onEditAvatar}/>
               </div>
             </div>
             <div className="profile__input">
@@ -39,7 +39,7 @@ function Main(props) {
             onClick={props.onAddPlace}>
             <img
               className="profile__add-button-img"
-              src={Vector}
+              src={vector}
               alt="кнопка добавить изоражение"/>
           </button>
         </section>

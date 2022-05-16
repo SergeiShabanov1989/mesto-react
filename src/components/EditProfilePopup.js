@@ -47,7 +47,7 @@ function EditProfilePopup(props) {
           name="popup__name"
           className="popup__text popup__text_type_name"
           onChange={handleNameEdit}
-          defaultValue={name}
+          value={name}
         />
         <div className="popup__text-container">
           <span className="popup__text-error popup__name-error"></span>
@@ -63,7 +63,7 @@ function EditProfilePopup(props) {
           name="popup__occupation"
           className="popup__text popup__text_type_occupation"
           onChange={handleDescriptionEdit}
-          defaultValue={description}
+          value={description}
         />
         <div className="popup__text-container">
           <span className="popup__text-error popup__occupation-error"></span>

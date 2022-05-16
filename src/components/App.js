@@ -20,7 +20,7 @@ function App() {
     link: '',
     isOpen: false
   });
-  const [currentUser, setCurrentUser] = React.useState('');
+  const [currentUser, setCurrentUser] = React.useState({});
 
   function handleCardLike(likes, id) {
     const isLiked = likes.some(i => i._id === currentUser._id);
