@@ -89,27 +89,27 @@ function App() {
     api.editProfile(dataProfileFromInput.name, dataProfileFromInput.about)
       .then((res) => {
         setCurrentUser(res)
+        closeAllPopups()
       })
       .catch(console.log)
-    closeAllPopups()
   }
 
   function onUpdateAvatar(dataAvatarFromInput) {
     api.editAvatar(dataAvatarFromInput.avatar)
       .then((res) => {
         setCurrentUser(res)
+        closeAllPopups()
       })
       .catch(console.log)
-    closeAllPopups()
   }
 
   function handleAddPlaceSubmit(dataCardFromInput) {
     api.addCard(dataCardFromInput.name, dataCardFromInput.link)
       .then((newCard) => {
         setCards([newCard, ...cards])
+        closeAllPopups()
       })
       .catch(console.log)
-    closeAllPopups()
   }
 
   return (
