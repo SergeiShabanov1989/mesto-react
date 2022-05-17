@@ -17,8 +17,8 @@ function Main(props) {
                 src={currentUser.avatar}
                 alt="твой аватар"
                 className="profile__avatar"/>
-              <div className="profile__edit-overlay">
-                <img src={editCard} className="profile__edit-img" alt="Изменить аватар" onClick={props.onEditAvatar}/>
+              <div className="profile__edit-overlay" onClick={props.onEditAvatar}>
+                <img src={editCard} className="profile__edit-img" alt="Изменить аватар"/>
               </div>
             </div>
             <div className="profile__input">
@@ -49,7 +49,12 @@ function Main(props) {
       <section className="elements content__elements">
         {
         props.cards.map((card) => (
-          <Card {...card} key={card._id} onCardClick={props.onCardClick} onCardLike={props.onCardLike} onCardDelete={props.onCardDelete}/>
+          <Card
+            {...card}
+            key={card._id}
+            onCardClick={props.onCardClick}
+            onCardLike={props.onCardLike}
+            onCardDelete={props.onCardDelete}/>
         ))
         }
       </section>

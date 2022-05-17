@@ -5,6 +5,13 @@ function AddPlacePopup(props) {
   const [place, setPlace] = React.useState('');
   const [placeUrl, setPlaceUrl] = React.useState('');
 
+  React.useEffect(() => {
+    if (props.isOpen) {
+      setPlace('')
+      setPlaceUrl('')
+    }
+  }, [props.isOpen])
+
   function handlePlaceAdd(e) {
     setPlace(e.target.value)
   }
@@ -35,7 +42,7 @@ function AddPlacePopup(props) {
           onChange={handlePlaceAdd}
           type="text"
           placeholder="Название"
-          value={place}
+          value={place || ''}
           minLength="2"
           maxLength="30"
           required
@@ -50,7 +57,7 @@ function AddPlacePopup(props) {
           onChange={handlePlaceUrlAdd}
           type="url"
           placeholder="Ссылка на картинку"
-          value={placeUrl}
+          value={placeUrl || ''}
           required
           name="popup__url"
           className="popup__text popup__text_type_url"/>

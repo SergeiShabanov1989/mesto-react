@@ -116,12 +116,31 @@ function App() {
     <CurrentUserContext.Provider value={{ currentUser }}>
       <>
         <Header />
-        <Main cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} onCardClick={handleCardClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlacePopupOpen} onEditAvatar={handleEditAvatarPopupOpen}/>
+        <Main
+          cards={cards}
+          onCardLike={handleCardLike}
+          onCardDelete={handleCardDelete}
+          onCardClick={handleCardClick}
+          onEditProfile={handleEditProfileClick}
+          onAddPlace={handleAddPlacePopupOpen}
+          onEditAvatar={handleEditAvatarPopupOpen}/>
         <Footer />
-        <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={onUpdateUser}/>
-        <AddPlacePopup onClose={closeAllPopups} isOpen={isAddPlacePopupOpen} onAddPlace={handleAddPlaceSubmit}/>
-        <PopupWithForm button="Да" name="delete" title="Вы уверены?"/>
-        <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onUpdateAvatar={onUpdateAvatar}/>
+        <EditProfilePopup
+          isOpen={isEditProfilePopupOpen}
+          onClose={closeAllPopups}
+          onUpdateUser={onUpdateUser}/>
+        <AddPlacePopup
+          onClose={closeAllPopups}
+          isOpen={isAddPlacePopupOpen}
+          onAddPlace={handleAddPlaceSubmit}/>
+        <PopupWithForm
+          button="Да"
+          name="delete"
+          title="Вы уверены?"/>
+        <EditAvatarPopup
+          isOpen={isEditAvatarPopupOpen}
+          onClose={closeAllPopups}
+          onUpdateAvatar={onUpdateAvatar}/>
         <ImagePopup onClose={closeAllPopups} card={selectedCard}/>
       </>
     </CurrentUserContext.Provider>
